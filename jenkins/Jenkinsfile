@@ -1,16 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing'
-            }
-        }
         stage('Deploy') {
             steps {
                 echo 'Deploying'
@@ -31,7 +21,7 @@ pipeline {
                 sh 'docker -v'
             }
         }
-        stage('docker -v') {
+        stage('docker run') {
             steps {
                 sh 'docker run eb287e2bf177'
             }
