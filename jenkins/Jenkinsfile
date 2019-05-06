@@ -21,9 +21,9 @@ pipeline {
                 sh 'docker -v'
             }
         }
-        stage('docker run') {
+        stage('docker start') {
             steps {
-                sh 'docker run eb287e2bf177'
+                sh 'docker start eb287e2bf177'
             }
         }
     }
