@@ -16,5 +16,20 @@ pipeline {
                 echo 'Deploying'
             }
         }
+        stage('who am i') {
+            steps {
+                sh 'whoami'
+            }
+        }
+        stage('mvn -v') {
+            steps {
+                sh 'mvn -v'
+            }
+        }
+        stage('docker -v') {
+            steps {
+                sh 'docker -v'
+            }
+        }
     }
 }
