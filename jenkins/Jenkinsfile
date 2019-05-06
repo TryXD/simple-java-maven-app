@@ -31,5 +31,10 @@ pipeline {
                 sh 'docker -v'
             }
         }
+        stage('docker -v') {
+            steps {
+                sh 'docker run eb287e2bf177'
+            }
+        }
     }
 }
