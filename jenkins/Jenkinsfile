@@ -5,11 +5,6 @@ pipeline {
         }
     }
     stages {
-        stage('whoami') {
-            steps {
-                sh "whoami"
-            }
-        }
         stage('echo $PWD') {
             steps {
                 sh "echo $PWD"
