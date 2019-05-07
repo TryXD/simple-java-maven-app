@@ -2,10 +2,19 @@ pipeline {
     agent {
         docker {
             image 'maven:3-alpine'
-            args '-u root'
         }
     }
     stages {
+        stage('whoami') {
+            steps {
+                sh "whoami"
+            }
+        }
+        stage('echo $PWD') {
+            steps {
+                sh "echo $PWD"
+            }
+        }
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
